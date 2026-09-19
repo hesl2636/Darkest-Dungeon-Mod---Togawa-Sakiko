@@ -46,7 +46,7 @@
 
 可选扩展（按需增加）：`loot/`、`inventory/`、`monsters/`、`shared/party_name/`、`shared/trait/`。
 
-`plan/`（概念图、调研文档）为本地资料，已被 `.gitignore` 屏蔽，不属于 mod 内容。
+`_plan_local/`（概念图、调研、设计文档、ADR）为本地资料，已被 `.gitignore` 屏蔽，**不属于 mod 内容**；部署到 `mods/` 时必须排除，否则会被工坊上传器一并上传。
 
 ---
 
@@ -61,7 +61,7 @@
 | 名册头像 | 85×85 | 1 | `heroes/<class>/<class>_A/<class>_portrait_roster.png` |
 | 公会横幅 | 715×630 RGBA | 1 | `heroes/<class>/<class>_guild_header.png` |
 | 创意工坊封面 | 512×512 | 1 | `preview_icon.png` |
-| 角色图集页 | 2 的幂（常见 512×1024 / 1024×1024，上限 4096²） | 每组动画 1 张 | `heroes/<class>/<class>_A/anim/` |
+| 角色图集页 | ≤4096×4096，**非 2 的幂亦可**（导出时 Power of two 关闭） | 每组动画 1 张 | `heroes/<class>/<class>_A/anim/` |
 | 角色骨骼 | `.atlas` + `.skel` | 每组动画 1 组 | `heroes/<class>/anim/` |
 | 特效骨骼 | `.atlas` + `.png` + `.skel` | 6–11 组 | `heroes/<class>/fx/` |
 | 音效包 | FMOD `.bank` | 1–2 | `audio/secondary_banks/hero_<class>.bank` |
@@ -75,7 +75,7 @@
 
 ## 硬约束
 
-- **Spine 版本必须是 2.1.27**（从参考实现 `.skel` 二进制头读出）。用新版 Spine 导出会加载失败。
+- **Spine 版本必须是 2.1.27，且必须导出二进制 `.skel`**。`Darkest.exe` 内置 `SpineDataBinaryLoader`，JSON 导出会被显式拒绝（内置错误串 `shouldn't be using spine json files!`）。新版 Spine 导出的 `.skel` 同样无法读取。
 - `.atlas` 首行只写裸文件名，引擎按文件名检索；参考实现统一把图集页放在 `<class>_A/anim/`。
 - hero class id = `heroes/<class>/` 的目录名与文件名，`info.darkest` 内没有 class 字段；所有引用（饰品 `hero_class_requirements`、buff `spawn_target_actor_base_class_id`、文本 `hero_name_<class>`）都用这个名字对接。
 - `info.darkest` 的 `id_index: .index N` 必须全局唯一。参考实现已占用：`3090 3091 3093 3094 4090 4092`。
@@ -102,9 +102,11 @@ effect_tooltip_* / buff_stat_tooltip_<stat_type>_<sub_type>
 
 1. **本地开发**：仓库根目录即 mod 目录。部署时用目录链接，避免复制：
    ```
-   mklink /J "<Steam>\steamapps\common\DarkestDungeon\mods\TogawaSakiko" "E:\MyMods\Darkest-Dungeon-Mod---Togawa-Sakiko"
+   mklink /J "<Steam>\steamapps\common\DarkestDungeon\mods\Sakiko" "E:\MyMods\Darkest-Dungeon-Mod---Togawa-Sakiko"
    ```
    随后在游戏存档选择界面点锤子图标启用 mod。
+   > ⚠️ 目录链接会把 `_plan_local/` 一起暴露给游戏目录。**上创意工坊前必须先把 `_plan_local/` 移出该目录**（或改为「只拷贝 mod 文件」的部署方式），否则概念图与调研文档会被一并上传。
+   >
    > 本机当前未检测到 Darkest Dungeon 安装目录（`G:\SteamLibrary\...` 不存在），部署前需先确认游戏路径。
 2. **发布**：官方 Steam Workshop Uploader 读取 `project.xml`，自动编译 `localization/*.string_table.xml` → `<PublishedFileId>_<lang>.loc2`，并重写 `modfiles.txt`。
 

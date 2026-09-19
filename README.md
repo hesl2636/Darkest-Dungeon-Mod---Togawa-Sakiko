@@ -46,6 +46,8 @@
 
 可选扩展（按需增加）：`loot/`、`inventory/`、`monsters/`、`shared/party_name/`、`shared/trait/`。
 
+`plan/`（概念图、调研文档）为本地资料，已被 `.gitignore` 屏蔽，不属于 mod 内容。
+
 ---
 
 ## 素材规格（实测自参考实现）

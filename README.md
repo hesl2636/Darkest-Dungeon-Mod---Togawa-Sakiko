@@ -5,7 +5,8 @@
 - 参考实现：`E:\MyMods\Reference\`（6 个已上架创意工坊的 MyGO / Ave Mujica 角色 mod，目录名即 Workshop ID）
 - 目标游戏：Darkest Dungeon 1
 
-**状态：仅有仓库骨架，模组内容未开始。**
+**状态：数据框架已建立（职业数据 + 文本 + 校验脚本），美术/动画/音频未接入；核心辅助机制按设计仍待实机验证。**
+> 框架口径：英雄暂不进入招募池（`generation` 关闭）；已接入的数据技能为「指认 / 夺回一切 / 赌上所有」，其余 5 个技能与验证关卡清单见 `tools/framework.json`（blocked + gate + reason）。本地校验：`node _plan_local/tools/validate.mjs`（静态引用/键位检查，**不等于**游戏内验证）。
 
 ---
 

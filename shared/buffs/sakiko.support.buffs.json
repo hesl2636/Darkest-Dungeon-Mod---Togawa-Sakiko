@@ -1,0 +1,159 @@
+{
+  "buffs": [
+    {
+      "id": "sakiko_trinket_mask_resolve",
+      "stat_type": "resolve_check_percent",
+      "stat_sub_type": "",
+      "amount": 0.04,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_mask_stress",
+      "stat_type": "stress_dmg_received_percent",
+      "stat_sub_type": "",
+      "amount": -0.10,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_score_dmg_low",
+      "stat_type": "combat_stat_multiply",
+      "stat_sub_type": "damage_low",
+      "amount": 0.08,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_score_dmg_high",
+      "stat_type": "combat_stat_multiply",
+      "stat_sub_type": "damage_high",
+      "amount": 0.08,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_score_crit",
+      "stat_type": "combat_stat_add",
+      "stat_sub_type": "crit_chance",
+      "amount": 0.03,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_keyshard_spd",
+      "stat_type": "combat_stat_add",
+      "stat_sub_type": "speed_rating",
+      "amount": 3,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_keyshard_acc",
+      "stat_type": "combat_stat_add",
+      "stat_sub_type": "attack_rating",
+      "amount": 0.08,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_invitation_heal",
+      "stat_type": "hp_heal_received_percent",
+      "stat_sub_type": "",
+      "amount": 0.25,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_invitation_stress",
+      "stat_type": "stress_dmg_received_percent",
+      "stat_sub_type": "",
+      "amount": -0.15,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_earring_dmg_low",
+      "stat_type": "combat_stat_multiply",
+      "stat_sub_type": "damage_low",
+      "amount": 0.15,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_earring_dmg_high",
+      "stat_type": "combat_stat_multiply",
+      "stat_sub_type": "damage_high",
+      "amount": 0.15,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_earring_spd",
+      "stat_type": "combat_stat_add",
+      "stat_sub_type": "speed_rating",
+      "amount": 5,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_trinket_earring_resolve",
+      "stat_type": "resolve_check_percent",
+      "stat_sub_type": "",
+      "amount": -0.06,
+      "duration_type": "",
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    },
+    {
+      "id": "sakiko_under_mask_resolve",
+      "stat_type": "resolve_check_percent",
+      "stat_sub_type": "",
+      "amount": 0.05,
+      "duration_type": "quest_end",
+      "duration": 1,
+      "remove_if_not_active": false,
+      "rule_type": "always",
+      "is_false_rule": false,
+      "rule_data": { "float": 0, "string": "" }
+    }
+  ]
+}

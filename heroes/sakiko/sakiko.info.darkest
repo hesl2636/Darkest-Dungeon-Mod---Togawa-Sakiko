@@ -1,0 +1,43 @@
+resistances: .stun 30% .poison 30% .bleed 35% .disease 30% .move 30% .debuff 35% .death_blow 67% .trap 15%
+crit: .effects "on_crit_blightchance"
+weapon: .name "sakiko_weapon_0" .atk 0% .dmg 3 5 .crit 2% .spd 5
+weapon: .name "sakiko_weapon_1" .atk 0% .dmg 4 7 .crit 2% .spd 6 .upgradeRequirementCode 0
+weapon: .name "sakiko_weapon_2" .atk 0% .dmg 5 8 .crit 3% .spd 6 .upgradeRequirementCode 1
+weapon: .name "sakiko_weapon_3" .atk 0% .dmg 6 10 .crit 4% .spd 7 .upgradeRequirementCode 2
+weapon: .name "sakiko_weapon_4" .atk 0% .dmg 7 11 .crit 5% .spd 8 .upgradeRequirementCode 3
+armour: .name "sakiko_armour_0" .def 0% .prot 0 .hp 25 .spd 0
+armour: .name "sakiko_armour_1" .def 5% .prot 0 .hp 30 .spd 0 .upgradeRequirementCode 0
+armour: .name "sakiko_armour_2" .def 10% .prot 0 .hp 35 .spd 0 .upgradeRequirementCode 1
+armour: .name "sakiko_armour_3" .def 15% .prot 0 .hp 40 .spd 0 .upgradeRequirementCode 2
+armour: .name "sakiko_armour_4" .def 20% .prot 0 .hp 45 .spd 0 .upgradeRequirementCode 3
+
+// 指认：单体敌人攻击 + 命中施加标记
+combat_skill: .id "sakiko_designate" .level 0 .type "ranged" .atk 95% .dmg -25% .crit 0% .launch 34 .target 1234 .is_crit_valid True .effect "Sakiko_Mark01"
+combat_skill: .id "sakiko_designate" .level 1 .type "ranged" .atk 97% .dmg -20% .crit 0% .launch 34 .target 1234 .is_crit_valid True .effect "Sakiko_Mark02"
+combat_skill: .id "sakiko_designate" .level 2 .type "ranged" .atk 100% .dmg -15% .crit 0% .launch 34 .target 1234 .is_crit_valid True .effect "Sakiko_Mark03"
+combat_skill: .id "sakiko_designate" .level 3 .type "ranged" .atk 102% .dmg -10% .crit 0% .launch 34 .target 1234 .is_crit_valid True .effect "Sakiko_Mark04"
+combat_skill: .id "sakiko_designate" .level 4 .type "ranged" .atk 105% .dmg -5% .crit 0% .launch 34 .target 1234 .is_crit_valid True .effect "Sakiko_Mark05"
+
+// 夺回一切：敌方群体低伤 + 一次性乱位（乱位语义待实机验证）
+combat_skill: .id "sakiko_reclaim" .level 0 .type "ranged" .atk 90% .dmg -60% .crit -5% .launch 234 .target ~1234 .is_crit_valid True .effect "Sakiko_Shuffle01"
+combat_skill: .id "sakiko_reclaim" .level 1 .type "ranged" .atk 92% .dmg -57% .crit -5% .launch 234 .target ~1234 .is_crit_valid True .effect "Sakiko_Shuffle02"
+combat_skill: .id "sakiko_reclaim" .level 2 .type "ranged" .atk 95% .dmg -53% .crit -5% .launch 234 .target ~1234 .is_crit_valid True .effect "Sakiko_Shuffle03"
+combat_skill: .id "sakiko_reclaim" .level 3 .type "ranged" .atk 97% .dmg -49% .crit -5% .launch 234 .target ~1234 .is_crit_valid True .effect "Sakiko_Shuffle04"
+combat_skill: .id "sakiko_reclaim" .level 4 .type "ranged" .atk 100% .dmg -45% .crit -5% .launch 234 .target ~1234 .is_crit_valid True .effect "Sakiko_Shuffle05"
+
+// 赌上所有：高伤 + 自身压力（命中或未命中均支付）
+combat_skill: .id "sakiko_allin" .level 0 .type "ranged" .atk 95% .dmg 20% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress01"
+combat_skill: .id "sakiko_allin" .level 1 .type "ranged" .atk 97% .dmg 25% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress02"
+combat_skill: .id "sakiko_allin" .level 2 .type "ranged" .atk 100% .dmg 30% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress03"
+combat_skill: .id "sakiko_allin" .level 3 .type "ranged" .atk 102% .dmg 35% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress04"
+combat_skill: .id "sakiko_allin" .level 4 .type "ranged" .atk 105% .dmg 45% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress05"
+
+tag: .id "non-religious"
+tag: .id "light"
+tag: .id "mygo"
+deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHighDebuff deathsdoorSPDDebuff deathsdoorSRDebuff .recovery_buffs mortalityACCDebuff mortalityDMGLowDebuff mortalityDMGHighDebuff mortalitySPDDebuff mortalitySRDebuff .recovery_heart_attack_buffs heartattackACCDebuff heartattackDMGLowDebuff heartattackDMGHighDebuff heartattackSPDDebuff heartattackSRDebuff
+controlled: .target_rank 3
+id_index: .index 3095
+skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
+// 生成关闭：核心机制未接入且无美术素材，英雄暂不进入招募池
+generation: .is_generation_enabled false .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 3 .number_of_cards_in_deck 8 .card_chance 1.0

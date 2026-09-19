@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+  <PreviewIconFile>preview_icon.png</PreviewIconFile>
+  <ItemDescriptionShort>丰川祥子 - Ave Mujica领队</ItemDescriptionShort>
+  <ModDataPath>./</ModDataPath>
+  <Title>丰川祥子 - Ave Mujica领队</Title>
+  <Language>s_chinese</Language>
+  <UpdateDetails/>
+  <Visibility>private</Visibility>
+  <UploadMode>direct_upload</UploadMode>
+  <VersionMajor>0</VersionMajor>
+  <VersionMinor>1</VersionMinor>
+  <TargetBuild>0</TargetBuild>
+  <Tags>
+    <Tags>New Class</Tags>
+  </Tags>
+  <ItemDescription>Darkest Dungeon 1 的丰川祥子职业数据框架。尚未接入美术、动画与音频，核心辅助机制仍待验证，不可作为可玩版本发布。</ItemDescription>
+  <PublishedFileId>0</PublishedFileId>
+</project>

@@ -1,0 +1,21 @@
+commonfx: .deathfx death_medium
+
+weapon: .name "sakiko_weapon_0" .icon "eqp_weapon_0.png"
+weapon: .name "sakiko_weapon_1" .icon "eqp_weapon_1.png"
+weapon: .name "sakiko_weapon_2" .icon "eqp_weapon_2.png"
+weapon: .name "sakiko_weapon_3" .icon "eqp_weapon_3.png"
+weapon: .name "sakiko_weapon_4" .icon "eqp_weapon_4.png"
+
+armour: .name "sakiko_armour_0" .icon "eqp_armour_0.png"
+armour: .name "sakiko_armour_1" .icon "eqp_armour_1.png"
+armour: .name "sakiko_armour_2" .icon "eqp_armour_2.png"
+armour: .name "sakiko_armour_3" .icon "eqp_armour_3.png"
+armour: .name "sakiko_armour_4" .icon "eqp_armour_4.png"
+
+// Slots five/six/seven preserve the full eight-skill design order.
+// Animation and icon files are intentionally not supplied in the data framework.
+combat_skill: .id "sakiko_designate" .icon "five" .anim "attack_designate"
+combat_skill: .id "sakiko_reclaim" .icon "six" .anim "attack_reclaim"
+combat_skill: .id "sakiko_allin" .icon "seven" .anim "attack_allin"
+combat_move_skill: .id "move" .icon "generic_move" .anim "idle"
+act_out_display: .attack_friendly_anim "attack_designate"

@@ -1,0 +1,31 @@
+{
+  "hero": "sakiko",
+  "id_index": 3095,
+  "skills": [
+    {"id": "sakiko_dominion", "icon": "one", "status": "blocked", "gate": "A7", "reason": "Next-attack-only consumption, guaranteed hit/crit, stun timing and refresh semantics lack a verified implementation."},
+    {"id": "sakiko_survive", "icon": "two", "status": "blocked", "gate": "A11", "reason": "Direct ally health damage, protection and Death's Door behavior need engine evidence; bleeding is not a substitute."},
+    {"id": "sakiko_quit", "icon": "three", "status": "blocked", "gate": "A11/A12", "reason": "Party max-health cost and independent enemy stun resolution need verified target and damage semantics."},
+    {"id": "sakiko_stage", "icon": "four", "status": "blocked", "gate": "A10/A11", "reason": "Reliable same-round extra action for another hero, direct self-damage and recipient action limits remain unverified."},
+    {"id": "sakiko_designate", "icon": "five", "status": "data", "launch": "34", "target": "1234"},
+    {"id": "sakiko_reclaim", "icon": "six", "status": "data", "launch": "234", "target": "~1234"},
+    {"id": "sakiko_allin", "icon": "seven", "status": "data", "launch": "123", "target": "12"},
+    {"id": "sakiko_selfish", "icon": "eight", "status": "blocked", "gate": "A13/A14", "reason": "Skill-triggered persistent two-actions-per-round with next-round start and combat-end reset is not proven by constant hero initiative or a one-time action effect."}
+  ],
+  "runtime_checks": [
+    "Mark application after a hit, duration and resistance behavior.",
+    "Group shuffle executes at most once per cast, including mixed hit/miss results and multi-rank enemies.",
+    "All-in self stress is paid exactly once on hit or miss.",
+    "Camping: party stress heal has reference precedent (tomori/anon); NEGATIVE stress_heal_amount (under_mask +10 stress) has NO precedent and is experimental. Quest-end buff lifetime and repeated-camp/multiple-Sakiko stacking. Refresh-only is NOT implemented by the reference buff schema.",
+    "Class-specific camp and trinket loading, upgrade prerequisites, and English/Chinese display in the actual game."
+  ],
+  "deferred": ["art", "animation", "audio", "full_dialogue", "game_runtime_validation"],
+  "builtin_buffs": [
+    "deathsdoorACCDebuff", "deathsdoorDMGLowDebuff", "deathsdoorDMGHighDebuff", "deathsdoorSPDDebuff", "deathsdoorSRDebuff",
+    "mortalityACCDebuff", "mortalityDMGLowDebuff", "mortalityDMGHighDebuff", "mortalitySPDDebuff", "mortalitySRDebuff",
+    "heartattackACCDebuff", "heartattackDMGLowDebuff", "heartattackDMGHighDebuff", "heartattackSPDDebuff", "heartattackSRDebuff",
+    "campingStressResistBuff"
+  ],
+  "builtin_upgrade_trees": ["blacksmith.weapon", "blacksmith.armour", "guild.skill"],
+  "builtin_art": ["death_medium", "generic_move"],
+  "reference_projects": ["3434706722", "3780327377", "3423314339", "3455563349", "3416142945", "3409038793"]
+}

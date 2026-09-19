@@ -1,0 +1,22 @@
+// Sakiko combat effects — framework stage
+// Sakiko_Mark*: apply tag to a hit enemy. Duration and resistance behavior pending A7/A12 verification.
+effect: .name "Sakiko_Mark01" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 2 .on_hit true .on_miss false
+effect: .name "Sakiko_Mark02" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 2 .on_hit true .on_miss false
+effect: .name "Sakiko_Mark03" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 3 .on_hit true .on_miss false
+effect: .name "Sakiko_Mark04" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 3 .on_hit true .on_miss false
+effect: .name "Sakiko_Mark05" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 4 .on_hit true .on_miss false
+
+// Sakiko_Shuffle*: EXPERIMENTAL once-per-cast group shuffle.
+// .apply_once true is observed in reference data only for on-miss effects; per-invocation semantics unverified.
+effect: .name "Sakiko_Shuffle01" .target "target_group" .shuffleparty .chance 25% .on_hit true .on_miss false .apply_once true
+effect: .name "Sakiko_Shuffle02" .target "target_group" .shuffleparty .chance 30% .on_hit true .on_miss false .apply_once true
+effect: .name "Sakiko_Shuffle03" .target "target_group" .shuffleparty .chance 35% .on_hit true .on_miss false .apply_once true
+effect: .name "Sakiko_Shuffle04" .target "target_group" .shuffleparty .chance 40% .on_hit true .on_miss false .apply_once true
+effect: .name "Sakiko_Shuffle05" .target "target_group" .shuffleparty .chance 50% .on_hit true .on_miss false .apply_once true
+
+// Sakiko_SelfStress*: self stress paid on hit OR miss (赌上所有 design contract).
+effect: .name "Sakiko_SelfStress01" .target "performer" .curio_result_type "negative" .chance 100% .stress 10 .on_hit true .on_miss true
+effect: .name "Sakiko_SelfStress02" .target "performer" .curio_result_type "negative" .chance 100% .stress 9 .on_hit true .on_miss true
+effect: .name "Sakiko_SelfStress03" .target "performer" .curio_result_type "negative" .chance 100% .stress 8 .on_hit true .on_miss true
+effect: .name "Sakiko_SelfStress04" .target "performer" .curio_result_type "negative" .chance 100% .stress 7 .on_hit true .on_miss true
+effect: .name "Sakiko_SelfStress05" .target "performer" .curio_result_type "negative" .chance 100% .stress 6 .on_hit true .on_miss true

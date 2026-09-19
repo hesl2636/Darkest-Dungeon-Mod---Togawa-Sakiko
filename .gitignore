@@ -1,0 +1,20 @@
+# 上传器本地日志（每次上传都会重写，与模组内容无关）
+steam_workshop_uploader.log
+*.log
+
+# 操作系统
+Thumbs.db
+desktop.ini
+Desktop.ini
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+*~
+
+# 上传器生成物：默认保留（便于直接把仓库目录当作 mod 目录部署 / 测试）
+# 若只把仓库当源码、部署目录另有一份，可取消下面两行注释以减少 diff 噪音
+# modfiles.txt
+# localization/*.loc2

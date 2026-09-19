@@ -1,0 +1,24 @@
+# 仓库内统一 LF；工作区不因 core.autocrlf 发生行尾漂移
+* text=auto eol=lf
+
+# 二进制资源：禁止任何行尾/编码转换（Spine 骨骼、FMOD 音频包、编译后的本地化）
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.skel  binary
+*.bank  binary
+*.loc2  binary
+*.dds   binary
+*.ogg   binary
+*.wav   binary
+
+# 文本资源的 diff 更可读
+*.darkest  text
+*.json     text
+*.xml      text
+*.atlas    text
+*.txt      text
+
+# 生成物不参与 diff 统计
+modfiles.txt linguist-generated
+*.loc2       linguist-generated

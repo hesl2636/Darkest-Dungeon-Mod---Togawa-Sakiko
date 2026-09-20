@@ -6,7 +6,7 @@
 - 目标游戏：Darkest Dungeon 1
 
 **状态：数据框架已建立（职业数据 + 文本 + 校验脚本），美术/动画/音频未接入；核心辅助机制按设计仍待实机验证。**
-> 框架口径：英雄暂不进入招募池（`generation` 关闭）；已接入的数据技能为「指认 / 夺回一切 / 赌上所有」，其余 5 个技能与验证关卡清单见 `tools/framework.json`（blocked + gate + reason）。本地校验：`node _plan_local/tools/validate.mjs`（静态引用/键位检查，**不等于**游戏内验证）。
+> 框架口径：英雄暂不进入招募池（`generation` 关闭）；8 个战斗技能的数据均已按参考 mod 实测机制接入（先例与待验证项逐条见 `tools/framework.json` 的 `mechanism` / `gaps`）。本地校验：`node _plan_local/tools/validate.mjs`（静态引用/键位检查，**不等于**游戏内验证）。
 
 ---
 

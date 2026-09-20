@@ -14,9 +14,89 @@ effect: .name "Sakiko_Shuffle03" .target "target_group" .shuffleparty .chance 35
 effect: .name "Sakiko_Shuffle04" .target "target_group" .shuffleparty .chance 40% .on_hit true .on_miss false .apply_once true
 effect: .name "Sakiko_Shuffle05" .target "target_group" .shuffleparty .chance 50% .on_hit true .on_miss false .apply_once true
 
-// Sakiko_SelfStress*: self stress paid on hit OR miss (赌上所有 design contract).
+effect: .name "Sakiko_Dominion01" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .attack_rating_add 150% .crit_chance_add 100% .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_Dominion02" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .attack_rating_add 165% .crit_chance_add 100% .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_Dominion03" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .attack_rating_add 180% .crit_chance_add 100% .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_Dominion04" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .attack_rating_add 195% .crit_chance_add 100% .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_Dominion05" .target "target" .curio_result_type "positive" .chance 100% .combat_stat_buff 1 .attack_rating_add 210% .crit_chance_add 100% .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStress01" .target "target" .curio_result_type "negative" .chance 100% .stress 8 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStress02" .target "target" .curio_result_type "negative" .chance 100% .stress 7 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStress03" .target "target" .curio_result_type "negative" .chance 100% .stress 6 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStress04" .target "target" .curio_result_type "negative" .chance 100% .stress 5 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStress05" .target "target" .curio_result_type "negative" .chance 100% .stress 4 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStun01" .target "target" .curio_result_type "negative" .chance 100% .stun 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStun02" .target "target" .curio_result_type "negative" .chance 100% .stun 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStun03" .target "target" .curio_result_type "negative" .chance 100% .stun 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStun04" .target "target" .curio_result_type "negative" .chance 100% .stun 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentStun05" .target "target" .curio_result_type "negative" .chance 100% .stun 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentMark01" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentMark02" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentMark03" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentMark04" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_AgentMark05" .target "target" .curio_result_type "negative" .chance 100% .tag 1 .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_Drain01" .target "target" .curio_result_type "negative" .chance 100% .dotBleed 3 .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_Drain02" .target "target" .curio_result_type "negative" .chance 100% .dotBleed 4 .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_Drain03" .target "target" .curio_result_type "negative" .chance 100% .dotBleed 4 .duration 3 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_Drain04" .target "target" .curio_result_type "negative" .chance 100% .dotBleed 5 .duration 4 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_Drain05" .target "target" .curio_result_type "negative" .chance 100% .dotBleed 5 .duration 4 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_DrainStress01" .target "target" .curio_result_type "negative" .chance 100% .stress 6 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_DrainStress02" .target "target" .curio_result_type "negative" .chance 100% .stress 6 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_DrainStress03" .target "target" .curio_result_type "negative" .chance 100% .stress 5 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_DrainStress04" .target "target" .curio_result_type "negative" .chance 100% .stress 5 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_DrainStress05" .target "target" .curio_result_type "negative" .chance 100% .stress 4 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonHeal01" .target "performer" .curio_result_type "positive" .chance 100% .heal 8 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonHeal02" .target "performer" .curio_result_type "positive" .chance 100% .heal 10 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonHeal03" .target "performer" .curio_result_type "positive" .chance 100% .heal 12 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonHeal04" .target "performer" .curio_result_type "positive" .chance 100% .heal 14 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonHeal05" .target "performer" .curio_result_type "positive" .chance 100% .heal 16 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonStress01" .target "performer" .curio_result_type "positive" .chance 100% .healstress 4 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonStress02" .target "performer" .curio_result_type "positive" .chance 100% .healstress 5 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonStress03" .target "performer" .curio_result_type "positive" .chance 100% .healstress 6 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonStress04" .target "performer" .curio_result_type "positive" .chance 100% .healstress 7 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SiphonStress05" .target "performer" .curio_result_type "positive" .chance 100% .healstress 8 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyStress01" .target "performer_group_other" .curio_result_type "negative" .chance 100% .stress 10 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyStress02" .target "performer_group_other" .curio_result_type "negative" .chance 100% .stress 9 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyStress03" .target "performer_group_other" .curio_result_type "negative" .chance 100% .stress 8 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyStress04" .target "performer_group_other" .curio_result_type "negative" .chance 100% .stress 7 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyStress05" .target "performer_group_other" .curio_result_type "negative" .chance 100% .stress 6 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyDamage01" .target "performer_group_other" .curio_result_type "negative" .chance 100% .dotBleed 10 .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyDamage02" .target "performer_group_other" .curio_result_type "negative" .chance 100% .dotBleed 10 .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyDamage03" .target "performer_group_other" .curio_result_type "negative" .chance 100% .dotBleed 10 .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyDamage04" .target "performer_group_other" .curio_result_type "negative" .chance 100% .dotBleed 10 .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_PartyDamage05" .target "performer_group_other" .curio_result_type "negative" .chance 100% .dotBleed 10 .duration 1 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_GroupStun01" .target "target_group" .curio_result_type "negative" .chance 100% .stun 1 .on_hit true .on_miss false .queue true
+effect: .name "Sakiko_GroupStun02" .target "target_group" .curio_result_type "negative" .chance 112% .stun 1 .on_hit true .on_miss false .queue true
+effect: .name "Sakiko_GroupStun03" .target "target_group" .curio_result_type "negative" .chance 125% .stun 1 .on_hit true .on_miss false .queue true
+effect: .name "Sakiko_GroupStun04" .target "target_group" .curio_result_type "negative" .chance 137% .stun 1 .on_hit true .on_miss false .queue true
+effect: .name "Sakiko_GroupStun05" .target "target_group" .curio_result_type "negative" .chance 150% .stun 1 .on_hit true .on_miss false .queue true
+effect: .name "Sakiko_StageCost01" .target "performer" .curio_result_type "negative" .chance 100% .stress 8 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_StageCost02" .target "performer" .curio_result_type "negative" .chance 100% .stress 7 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_StageCost03" .target "performer" .curio_result_type "negative" .chance 100% .stress 6 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_StageCost04" .target "performer" .curio_result_type "negative" .chance 100% .stress 6 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_StageCost05" .target "performer" .curio_result_type "negative" .chance 100% .stress 5 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_StageBleed01" .target "performer" .curio_result_type "negative" .chance 100% .dotBleed 4 .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_StageBleed02" .target "performer" .curio_result_type "negative" .chance 100% .dotBleed 4 .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_StageBleed03" .target "performer" .curio_result_type "negative" .chance 100% .dotBleed 3 .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_StageBleed04" .target "performer" .curio_result_type "negative" .chance 100% .dotBleed 3 .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_StageBleed05" .target "performer" .curio_result_type "negative" .chance 100% .dotBleed 3 .duration 2 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_ExtraAction01" .target "target" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+effect: .name "Sakiko_ExtraAction02" .target "target" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+effect: .name "Sakiko_ExtraAction03" .target "target" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+effect: .name "Sakiko_ExtraAction04" .target "target" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+effect: .name "Sakiko_ExtraAction05" .target "target" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+effect: .name "Sakiko_ResolveDown01" .target "performer_group_other" .curio_result_type "negative" .chance 100% .buff_source_type bsrc_item .buff_ids "sakiko_resolve_DECREASE1" .on_hit true .on_miss false .apply_once true
+effect: .name "Sakiko_ResolveDown02" .target "performer_group_other" .curio_result_type "negative" .chance 100% .buff_source_type bsrc_item .buff_ids "sakiko_resolve_DECREASE2" .on_hit true .on_miss false .apply_once true
+effect: .name "Sakiko_ResolveDown03" .target "performer_group_other" .curio_result_type "negative" .chance 100% .buff_source_type bsrc_item .buff_ids "sakiko_resolve_DECREASE3" .on_hit true .on_miss false .apply_once true
+effect: .name "Sakiko_ResolveDown04" .target "performer_group_other" .curio_result_type "negative" .chance 100% .buff_source_type bsrc_item .buff_ids "sakiko_resolve_DECREASE4" .on_hit true .on_miss false .apply_once true
+effect: .name "Sakiko_ResolveDown05" .target "performer_group_other" .curio_result_type "negative" .chance 100% .buff_source_type bsrc_item .buff_ids "sakiko_resolve_DECREASE5" .on_hit true .on_miss false .apply_once true
+effect: .name "Sakiko_SelfAction01" .target "performer" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+effect: .name "Sakiko_SelfAction02" .target "performer" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+effect: .name "Sakiko_SelfAction03" .target "performer" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+effect: .name "Sakiko_SelfAction04" .target "performer" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+effect: .name "Sakiko_SelfAction05" .target "performer" .initiative_change 1 .on_hit true .on_miss true .apply_once true .has_description false .queue true
+
 effect: .name "Sakiko_SelfStress01" .target "performer" .curio_result_type "negative" .chance 100% .stress 10 .on_hit true .on_miss true
-effect: .name "Sakiko_SelfStress02" .target "performer" .curio_result_type "negative" .chance 100% .stress 9 .on_hit true .on_miss true
-effect: .name "Sakiko_SelfStress03" .target "performer" .curio_result_type "negative" .chance 100% .stress 8 .on_hit true .on_miss true
-effect: .name "Sakiko_SelfStress04" .target "performer" .curio_result_type "negative" .chance 100% .stress 7 .on_hit true .on_miss true
-effect: .name "Sakiko_SelfStress05" .target "performer" .curio_result_type "negative" .chance 100% .stress 6 .on_hit true .on_miss true
+effect: .name "Sakiko_SelfStress02" .target "performer" .curio_result_type "negative" .chance 100% .stress 9 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SelfStress03" .target "performer" .curio_result_type "negative" .chance 100% .stress 8 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SelfStress04" .target "performer" .curio_result_type "negative" .chance 100% .stress 7 .on_hit true .on_miss true .queue true
+effect: .name "Sakiko_SelfStress05" .target "performer" .curio_result_type "negative" .chance 100% .stress 6 .on_hit true .on_miss true .queue true

@@ -12,6 +12,56 @@ armour: .name "sakiko_armour_3" .def 15% .prot 0 .hp 40 .spd 0 .upgradeRequireme
 armour: .name "sakiko_armour_4" .def 20% .prot 0 .hp 45 .spd 0 .upgradeRequirementCode 3
 
 // 指认：单体敌人攻击 + 命中施加标记
+//无惧遗忘 — 支配：队友攻击强化（tomori mayoiuta 先例）；代价：加压/眩晕/标记全部落在队友身上
+
+combat_skill: .id "sakiko_dominion" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_Dominion01" "Sakiko_AgentStress01" "Sakiko_AgentStun01" "Sakiko_AgentMark01" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_dominion" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_Dominion02" "Sakiko_AgentStress02" "Sakiko_AgentStun02" "Sakiko_AgentMark02" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_dominion" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_Dominion03" "Sakiko_AgentStress03" "Sakiko_AgentStun03" "Sakiko_AgentMark03" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_dominion" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_Dominion04" "Sakiko_AgentStress04" "Sakiko_AgentStun04" "Sakiko_AgentMark04" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_dominion" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_Dominion05" "Sakiko_AgentStress05" "Sakiko_AgentStun05" "Sakiko_AgentMark05" .refresh_after_each_wave true
+
+//活下去 — 抽取：队友流血+加压，自身回血减压（代价与收益分离）
+
+combat_skill: .id "sakiko_survive" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 234 .target ~@1234 .is_crit_valid True .effect "Sakiko_Drain01" "Sakiko_DrainStress01" "Sakiko_SiphonHeal01" "Sakiko_SiphonStress01" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_survive" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 234 .target ~@1234 .is_crit_valid True .effect "Sakiko_Drain02" "Sakiko_DrainStress02" "Sakiko_SiphonHeal02" "Sakiko_SiphonStress02" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_survive" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 234 .target ~@1234 .is_crit_valid True .effect "Sakiko_Drain03" "Sakiko_DrainStress03" "Sakiko_SiphonHeal03" "Sakiko_SiphonStress03" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_survive" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 234 .target ~@1234 .is_crit_valid True .effect "Sakiko_Drain04" "Sakiko_DrainStress04" "Sakiko_SiphonHeal04" "Sakiko_SiphonStress04" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_survive" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .launch 234 .target ~@1234 .is_crit_valid True .effect "Sakiko_Drain05" "Sakiko_DrainStress05" "Sakiko_SiphonHeal05" "Sakiko_SiphonStress05" .refresh_after_each_wave true
+
+//退出宣言 — 每战1次：其他全体队友加压+扣血；尝试眩晕全体敌人（MultiStun 结构）
+
+combat_skill: .id "sakiko_quit" .level 0 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~1234 .is_crit_valid True .effect "Sakiko_PartyStress01" "Sakiko_PartyDamage01" "Sakiko_GroupStun01" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_quit" .level 1 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~1234 .is_crit_valid True .effect "Sakiko_PartyStress02" "Sakiko_PartyDamage02" "Sakiko_GroupStun02" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_quit" .level 2 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~1234 .is_crit_valid True .effect "Sakiko_PartyStress03" "Sakiko_PartyDamage03" "Sakiko_GroupStun03" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_quit" .level 3 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~1234 .is_crit_valid True .effect "Sakiko_PartyStress04" "Sakiko_PartyDamage04" "Sakiko_GroupStun04" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_quit" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target ~1234 .is_crit_valid True .effect "Sakiko_PartyStress05" "Sakiko_PartyDamage05" "Sakiko_GroupStun05" .refresh_after_each_wave true
+
+//你的舞台 — 自身压力/流血换队友当轮额外行动（队友目标待实机验证）
+
+combat_skill: .id "sakiko_stage" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost01" "Sakiko_StageBleed01" "Sakiko_ExtraAction01" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_stage" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost02" "Sakiko_StageBleed02" "Sakiko_ExtraAction02" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_stage" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost03" "Sakiko_StageBleed03" "Sakiko_ExtraAction03" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_stage" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost04" "Sakiko_StageBleed04" "Sakiko_ExtraAction04" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_stage" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost05" "Sakiko_StageBleed05" "Sakiko_ExtraAction05" .refresh_after_each_wave true
+
+// 指认：单体敌人攻击 + 命中施加标记
+
 combat_skill: .id "sakiko_designate" .level 0 .type "ranged" .atk 95% .dmg -25% .crit 0% .launch 34 .target 1234 .is_crit_valid True .effect "Sakiko_Mark01"
 combat_skill: .id "sakiko_designate" .level 1 .type "ranged" .atk 97% .dmg -20% .crit 0% .launch 34 .target 1234 .is_crit_valid True .effect "Sakiko_Mark02"
 combat_skill: .id "sakiko_designate" .level 2 .type "ranged" .atk 100% .dmg -15% .crit 0% .launch 34 .target 1234 .is_crit_valid True .effect "Sakiko_Mark03"
@@ -19,6 +69,7 @@ combat_skill: .id "sakiko_designate" .level 3 .type "ranged" .atk 102% .dmg -10%
 combat_skill: .id "sakiko_designate" .level 4 .type "ranged" .atk 105% .dmg -5% .crit 0% .launch 34 .target 1234 .is_crit_valid True .effect "Sakiko_Mark05"
 
 // 夺回一切：敌方群体低伤 + 一次性乱位（乱位语义待实机验证）
+
 combat_skill: .id "sakiko_reclaim" .level 0 .type "ranged" .atk 90% .dmg -60% .crit -5% .launch 234 .target ~1234 .is_crit_valid True .effect "Sakiko_Shuffle01"
 combat_skill: .id "sakiko_reclaim" .level 1 .type "ranged" .atk 92% .dmg -57% .crit -5% .launch 234 .target ~1234 .is_crit_valid True .effect "Sakiko_Shuffle02"
 combat_skill: .id "sakiko_reclaim" .level 2 .type "ranged" .atk 95% .dmg -53% .crit -5% .launch 234 .target ~1234 .is_crit_valid True .effect "Sakiko_Shuffle03"
@@ -26,11 +77,24 @@ combat_skill: .id "sakiko_reclaim" .level 3 .type "ranged" .atk 97% .dmg -49% .c
 combat_skill: .id "sakiko_reclaim" .level 4 .type "ranged" .atk 100% .dmg -45% .crit -5% .launch 234 .target ~1234 .is_crit_valid True .effect "Sakiko_Shuffle05"
 
 // 赌上所有：高伤 + 自身压力（命中或未命中均支付）
+
 combat_skill: .id "sakiko_allin" .level 0 .type "ranged" .atk 95% .dmg 20% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress01"
 combat_skill: .id "sakiko_allin" .level 1 .type "ranged" .atk 97% .dmg 25% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress02"
 combat_skill: .id "sakiko_allin" .level 2 .type "ranged" .atk 100% .dmg 30% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress03"
 combat_skill: .id "sakiko_allin" .level 3 .type "ranged" .atk 102% .dmg 35% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress04"
 combat_skill: .id "sakiko_allin" .level 4 .type "ranged" .atk 105% .dmg 45% .crit 0% .launch 123 .target 12 .is_crit_valid True .effect "Sakiko_SelfStress05"
+
+//只想着自己 — 每战1次：其他队友美德惩罚（quest_end 跨战累积）；自身获 1 次额外行动
+
+combat_skill: .id "sakiko_selfish" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target @1234 .is_crit_valid True .effect "Sakiko_ResolveDown01" "Sakiko_SelfAction01" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_selfish" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target @1234 .is_crit_valid True .effect "Sakiko_ResolveDown02" "Sakiko_SelfAction02" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_selfish" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target @1234 .is_crit_valid True .effect "Sakiko_ResolveDown03" "Sakiko_SelfAction03" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_selfish" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target @1234 .is_crit_valid True .effect "Sakiko_ResolveDown04" "Sakiko_SelfAction04" .refresh_after_each_wave true
+
+combat_skill: .id "sakiko_selfish" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 1 .launch 1234 .target @1234 .is_crit_valid True .effect "Sakiko_ResolveDown05" "Sakiko_SelfAction05" .refresh_after_each_wave true
 
 tag: .id "non-religious"
 tag: .id "light"
@@ -39,5 +103,5 @@ deaths_door: .buffs deathsdoorACCDebuff deathsdoorDMGLowDebuff deathsdoorDMGHigh
 controlled: .target_rank 3
 id_index: .index 3095
 skill_selection: .can_select_combat_skills true .number_of_selected_combat_skills_max 4
-// 生成关闭：核心机制未接入且无美术素材，英雄暂不进入招募池
-generation: .is_generation_enabled false .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 3 .number_of_cards_in_deck 8 .card_chance 1.0
+// 生成关闭：机制未实机验证且无美术素材，英雄暂不进入招募池
+generation: .is_generation_enabled false .number_of_positive_quirks_min 1 .number_of_positive_quirks_max 2 .number_of_negative_quirks_min 1 .number_of_negative_quirks_max 2 .number_of_class_specific_camping_skills 2 .number_of_shared_camping_skills 1 .number_of_random_combat_skills 8 .number_of_cards_in_deck 8 .card_chance 1.0

@@ -14,6 +14,11 @@ armour: .name "sakiko_armour_4" .icon "eqp_armour_4.png"
 
 // Slots five/six/seven preserve the full eight-skill design order.
 // Animation and icon files are intentionally not supplied in the data framework.
+combat_skill: .id "sakiko_dominion" .icon "one" .anim "attack_dominion"
+combat_skill: .id "sakiko_survive" .icon "two" .anim "attack_survive"
+combat_skill: .id "sakiko_quit" .icon "three" .anim "attack_quit"
+combat_skill: .id "sakiko_stage" .icon "four" .anim "attack_stage"
+combat_skill: .id "sakiko_selfish" .icon "eight" .anim "attack_selfish"
 combat_skill: .id "sakiko_designate" .icon "five" .anim "attack_designate"
 combat_skill: .id "sakiko_reclaim" .icon "six" .anim "attack_reclaim"
 combat_skill: .id "sakiko_allin" .icon "seven" .anim "attack_allin"

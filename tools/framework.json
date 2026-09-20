@@ -2,32 +2,134 @@
   "hero": "sakiko",
   "id_index": 3095,
   "skills": [
-    {"id": "sakiko_dominion", "icon": "one", "status": "data", "launch": "34", "target": "~@1234", "mechanism": "Ally attack buff (tomori mayoiuta precedent) + ally stress/stun/mark as cost.", "gaps": ["One-consumption 'next attack only' is NOT expressible in data; approximated as a 1-round combat_stat_buff (attack_rating_add 150-210%, crit_chance_add 100%). Refresh/consumption semantics pending A7.", "Ally stun (.stun 1) and ally mark (.tag on ally) have no direct mod precedent — inferred from ally-targeted effect writes (experimental)."]},
-    {"id": "sakiko_survive", "icon": "two", "status": "data", "launch": "234", "target": "~@1234", "mechanism": "Ally dotBleed + stress (ally dot precedent: TakiStress dotStress on ally target), self heal/healstress (soyo precedent).", "gaps": ["Direct ally health damage (.health_damage) has NO precedent in any reference mod or documented boss skill; represented as dotBleed. Death's Door/protection interactions pending A11."]},
-    {"id": "sakiko_quit", "icon": "three", "status": "data", "launch": "1234", "target": "~1234", "mechanism": "Other-allies stress via performer_group_other (tomori stress01-05 precedent). Enemy group stun via effect .target target_group (original MultiStun boss structure per design F22).", "gaps": ["Party bleed is dotBleed (flat 10/1 round), not max-health percent — 20% max HP cost not expressible; fixed-value compromise documented in design §4.7.", "Group stun once-per-target resolution and post-stun resistance ladder pending A12."]},
-    {"id": "sakiko_stage", "icon": "four", "status": "data", "launch": "34", "target": "~@1234", "mechanism": "Self stress (uika precedent) + self dotBleed (mutsumi mortis_bleed precedent) to grant ONE extra action to the targeted ally via .initiative_change 1 (taki Taki_Extra_Action precedent — caster-target only there).", "gaps": ["initiative_change on a non-caster ally target is community-flagged unreliable ('gets weird'); requires A10 runtime verification before trusting."]},
-    {"id": "sakiko_designate", "icon": "five", "status": "data", "launch": "34", "target": "1234"},
-    {"id": "sakiko_reclaim", "icon": "six", "status": "data", "launch": "234", "target": "~1234"},
-    {"id": "sakiko_allin", "icon": "seven", "status": "data", "launch": "123", "target": "12"},
-    {"id": "sakiko_selfish", "icon": "eight", "status": "data", "launch": "1234", "target": "@1234", "mechanism": "Other-allies resolve penalty via performer_group_other + buff_ids resolve_check_percent quest_end (tomori/soyo precedent; our buff refs are complete, no soyo dangling-ref bug). Caster extra action via .initiative_change 1 on performer (taki precedent).", "gaps": ["DESIGN DEVIATION: persistent two-actions-per-round is not expressible in hero data (monster-only field, untested on heroes). Implemented as one extra action in the casting round, per_battle_limit 1. A14 experiment (hero info initiative constant) remains the only candidate for the full design; do NOT promote to permanent double actions."]}
+    {
+      "id": "sakiko_dominion",
+      "icon": "one",
+      "status": "data",
+      "launch": "34",
+      "target": "~@1234",
+      "mechanism": "Ally attack buff (tomori mayoiuta precedent) + ally stress/stun/mark as cost.",
+      "gaps": [
+        "One-consumption 'next attack only' is NOT expressible in data; approximated as a 1-round combat_stat_buff (attack_rating_add 150-210%, crit_chance_add 100%). Refresh/consumption semantics pending A7.",
+        "Ally stun (.stun 1) and ally mark (.tag on ally) have no direct mod precedent — inferred from ally-targeted effect writes (experimental)."
+      ]
+    },
+    {
+      "id": "sakiko_survive",
+      "icon": "two",
+      "status": "data",
+      "launch": "234",
+      "target": "~@1234",
+      "mechanism": "Ally DIRECT damage via .health_damage (user-mandated; no mod precedent, engine behavior must be runtime-verified) + stress (TakiStress ally dot precedent); self heal/healstress (soyo precedent).",
+      "gaps": [
+        ".health_damage on ally targets has NO precedent in reference mods; per user decision implemented as direct damage. Death's Door, protection, and resist interactions are mandatory runtime checks (A11)."
+      ]
+    },
+    {
+      "id": "sakiko_quit",
+      "icon": "three",
+      "status": "data",
+      "launch": "1234",
+      "target": "~1234",
+      "mechanism": "Other-allies stress via performer_group_other (tomori precedent) + DIRECT damage via .health_damage 10 (user decision consistent with survive). Enemy group stun via .target target_group (MultiStun structure, F22).",
+      "gaps": [
+        "Party direct damage is flat 10, not max-health percent (fixed-value fallback per design §4.7).",
+        "Group stun once-per-target resolution and post-stun resistance ladder pending A12."
+      ]
+    },
+    {
+      "id": "sakiko_stage",
+      "icon": "four",
+      "status": "data",
+      "launch": "34",
+      "target": "~@1234",
+      "mechanism": "Self stress (uika precedent) + self direct damage .health_damage (user decision; mutsumi mortis_bleed precedent retired) to grant ONE extra action via .initiative_change 1 (taki precedent — caster-target only there).",
+      "gaps": [
+        "initiative_change on a non-caster ally target is community-flagged unreliable ('gets weird'); requires A10 runtime verification before trusting."
+      ]
+    },
+    {
+      "id": "sakiko_designate",
+      "icon": "five",
+      "status": "data",
+      "launch": "34",
+      "target": "1234"
+    },
+    {
+      "id": "sakiko_reclaim",
+      "icon": "six",
+      "status": "data",
+      "launch": "234",
+      "target": "~1234"
+    },
+    {
+      "id": "sakiko_allin",
+      "icon": "seven",
+      "status": "data",
+      "launch": "123",
+      "target": "12"
+    },
+    {
+      "id": "sakiko_selfish",
+      "icon": "eight",
+      "status": "data",
+      "launch": "1234",
+      "target": "@1234",
+      "mechanism": "Other-allies resolve penalty via performer_group_other + buff_ids resolve_check_percent quest_end (tomori/soyo precedent; our buff refs are complete, no soyo dangling-ref bug). Caster extra action via .initiative_change 1 on performer (taki precedent).",
+      "gaps": [
+        "DESIGN DEVIATION: persistent two-actions-per-round is not expressible in hero data (monster-only field, untested on heroes). Implemented as one extra action in the casting round, per_battle_limit 1. A14 experiment (hero info initiative constant) remains the only candidate for the full design; do NOT promote to permanent double actions."
+      ]
+    }
   ],
   "runtime_checks": [
     "Dominion: does the 1-round buff survive the ally's stun turn? Does crit_chance_add 100% actually guarantee crits or is there a cap? Does repeated casting refresh or stack? (A7)",
-    "Survive/Quit: ally dotBleed tick timing, Death's Door interaction, protection, stress received modifiers. (A11)",
+    "Survive/Quit/Stage: .health_damage magnitude, Death's Door interaction, protection, healing interactions. (A11)",
     "Quit: each enemy stunned/resists independently; ally costs paid exactly once even when every enemy resists; multi-rank enemies do not double-pay. (A12)",
     "Stage: initiative_change granted to an ally is reliable when that ally has/has not already acted this round; two casts do not stack into extra-extra actions. (A10)",
     "Selfish: resolve penalty applied once per cast, stacks across battles, cleared at quest end, no effect on Sakiko herself; camping virtue buff coexists by engine rules. (A13)",
     "Selfish: caster receives exactly one extra action in the casting round; no recursion, combat ends clean. (A14 partial)",
     "Class-specific camp and trinket loading, upgrade prerequisites, English/Chinese display in the actual game."
   ],
-  "deferred": ["art", "animation", "audio", "full_dialogue", "game_runtime_validation"],
+  "deferred": [
+    "art",
+    "animation",
+    "audio",
+    "full_dialogue",
+    "game_runtime_validation"
+  ],
   "builtin_buffs": [
-    "deathsdoorACCDebuff", "deathsdoorDMGLowDebuff", "deathsdoorDMGHighDebuff", "deathsdoorSPDDebuff", "deathsdoorSRDebuff",
-    "mortalityACCDebuff", "mortalityDMGLowDebuff", "mortalityDMGHighDebuff", "mortalitySPDDebuff", "mortalitySRDebuff",
-    "heartattackACCDebuff", "heartattackDMGLowDebuff", "heartattackDMGHighDebuff", "heartattackSPDDebuff", "heartattackSRDebuff",
+    "deathsdoorACCDebuff",
+    "deathsdoorDMGLowDebuff",
+    "deathsdoorDMGHighDebuff",
+    "deathsdoorSPDDebuff",
+    "deathsdoorSRDebuff",
+    "mortalityACCDebuff",
+    "mortalityDMGLowDebuff",
+    "mortalityDMGHighDebuff",
+    "mortalitySPDDebuff",
+    "mortalitySRDebuff",
+    "heartattackACCDebuff",
+    "heartattackDMGLowDebuff",
+    "heartattackDMGHighDebuff",
+    "heartattackSPDDebuff",
+    "heartattackSRDebuff",
     "campingStressResistBuff"
   ],
-  "builtin_upgrade_trees": ["blacksmith.weapon", "blacksmith.armour", "guild.skill"],
-  "builtin_art": ["death_medium", "generic_move"],
-  "reference_projects": ["3434706722", "3780327377", "3423314339", "3455563349", "3416142945", "3409038793"]
+  "builtin_upgrade_trees": [
+    "blacksmith.weapon",
+    "blacksmith.armour",
+    "guild.skill"
+  ],
+  "builtin_art": [
+    "death_medium",
+    "generic_move"
+  ],
+  "reference_projects": [
+    "3434706722",
+    "3780327377",
+    "3423314339",
+    "3455563349",
+    "3416142945",
+    "3409038793"
+  ]
 }

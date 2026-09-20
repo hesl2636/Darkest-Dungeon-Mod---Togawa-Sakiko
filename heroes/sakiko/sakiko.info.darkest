@@ -50,15 +50,15 @@ combat_skill: .id "sakiko_quit" .level 4 .type "ranged" .atk 0% .dmg 0% .crit 0%
 
 //你的舞台 — 自身压力/流血换队友当轮额外行动（队友目标待实机验证）
 
-combat_skill: .id "sakiko_stage" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost01" "Sakiko_StageBleed01" "Sakiko_ExtraAction01" .refresh_after_each_wave true
+combat_skill: .id "sakiko_stage" .level 0 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost01" "Sakiko_StageDamage01" "Sakiko_ExtraAction01" .refresh_after_each_wave true
 
-combat_skill: .id "sakiko_stage" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost02" "Sakiko_StageBleed02" "Sakiko_ExtraAction02" .refresh_after_each_wave true
+combat_skill: .id "sakiko_stage" .level 1 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost02" "Sakiko_StageDamage02" "Sakiko_ExtraAction02" .refresh_after_each_wave true
 
-combat_skill: .id "sakiko_stage" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost03" "Sakiko_StageBleed03" "Sakiko_ExtraAction03" .refresh_after_each_wave true
+combat_skill: .id "sakiko_stage" .level 2 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost03" "Sakiko_StageDamage03" "Sakiko_ExtraAction03" .refresh_after_each_wave true
 
-combat_skill: .id "sakiko_stage" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost04" "Sakiko_StageBleed04" "Sakiko_ExtraAction04" .refresh_after_each_wave true
+combat_skill: .id "sakiko_stage" .level 3 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost04" "Sakiko_StageDamage04" "Sakiko_ExtraAction04" .refresh_after_each_wave true
 
-combat_skill: .id "sakiko_stage" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost05" "Sakiko_StageBleed05" "Sakiko_ExtraAction05" .refresh_after_each_wave true
+combat_skill: .id "sakiko_stage" .level 4 .type "melee" .atk 0% .dmg 0% .crit 0% .per_battle_limit 2 .launch 34 .target ~@1234 .is_crit_valid True .effect "Sakiko_StageCost05" "Sakiko_StageDamage05" "Sakiko_ExtraAction05" .refresh_after_each_wave true
 
 // 指认：单体敌人攻击 + 命中施加标记
 

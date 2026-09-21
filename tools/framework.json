@@ -91,7 +91,6 @@
     "Class-specific camp and trinket loading, upgrade prerequisites, English/Chinese display in the actual game."
   ],
   "deferred": [
-    "art",
     "animation",
     "audio",
     "full_dialogue",
@@ -131,5 +130,8 @@
     "3455563349",
     "3416142945",
     "3409038793"
+  ],
+  "done": [
+    "static_art: 30 assets integrated from _plan_local/output (2026-09-21), independently audited 30/30 size/RGBA/alpha"
   ]
 }

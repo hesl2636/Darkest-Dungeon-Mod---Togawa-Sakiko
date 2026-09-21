@@ -1,0 +1,75 @@
+sakiko.sprite.idle.png
+size: 4096,4096
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sakiko/hair_back
+  rotate: false
+  xy: 4, 3186
+  size: 1116, 906
+  orig: 1116, 906
+  offset: 0, 0
+  index: -1
+sakiko/head
+  rotate: false
+  xy: 4, 2721
+  size: 506, 461
+  orig: 506, 461
+  offset: 0, 0
+  index: -1
+sakiko/hair_front
+  rotate: false
+  xy: 1124, 3236
+  size: 751, 856
+  orig: 751, 856
+  offset: 0, 0
+  index: -1
+sakiko/torso
+  rotate: false
+  xy: 1973, 3496
+  size: 666, 596
+  orig: 666, 596
+  offset: 0, 0
+  index: -1
+sakiko/arm_l
+  rotate: false
+  xy: 3238, 3581
+  size: 476, 511
+  orig: 476, 511
+  offset: 0, 0
+  index: -1
+sakiko/arm_r
+  rotate: false
+  xy: 2643, 3561
+  size: 591, 531
+  orig: 591, 531
+  offset: 0, 0
+  index: -1
+sakiko/skirt
+  rotate: false
+  xy: 514, 2772
+  size: 1106, 410
+  orig: 1106, 410
+  offset: 0, 0
+  index: -1
+sakiko/bow
+  rotate: false
+  xy: 1624, 2876
+  size: 376, 306
+  orig: 376, 306
+  offset: 0, 0
+  index: -1
+sakiko/mask
+  rotate: false
+  xy: 2004, 2986
+  size: 276, 196
+  orig: 276, 196
+  offset: 0, 0
+  index: -1
+sakiko/staff
+  rotate: false
+  xy: 1879, 3392
+  size: 90, 700
+  orig: 90, 700
+  offset: 0, 0
+  index: -1

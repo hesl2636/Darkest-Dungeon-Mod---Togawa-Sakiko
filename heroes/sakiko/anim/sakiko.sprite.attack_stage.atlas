@@ -1,4 +1,4 @@
-sakiko.sprite.idle.png
+sakiko.sprite.attack_stage.png
 size: 4096,4096
 format: RGBA8888
 filter: Linear,Linear
